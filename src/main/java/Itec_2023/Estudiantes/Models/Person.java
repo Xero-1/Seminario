@@ -1,7 +1,19 @@
 package Itec_2023.Estudiantes.Models;
 
+import lombok.Getter;
+import lombok.Setter;
+import jakarta.persistence.*;
+
+
+@Table(name="person")
+@Entity
+@Getter
+@Setter
 public class Person//Persona
 {
+    @Id
+    @GeneratedValue(strategy = GenerationType.AUTO)
+    @Column(name="id")
     private long idPerson;
     private String name;
     private String lastName;
@@ -9,6 +21,7 @@ public class Person//Persona
     private String phone;
     private String email;
     private String address;
+    /*
     //Constructors
     public Person()
     {
@@ -30,20 +43,5 @@ public class Person//Persona
         this.email=email;
         this.address=address;
     }
-    //Getters and setters
-    public long getIdPerson(){return this.idPerson;}
-    public String getName(){return this.name;}
-    public String getLastName(){return this.lastName;}
-    public String getDni(){return this.dni;}
-    public String getPhone(){return this.phone;}
-    public String getEmail(){return this.email;}
-    public String getAddress(){return this.address;}
-    public void setIdPerson(long idPerson){this.idPerson=idPerson;}
-    public void setName(String name){this.name=name;}
-    public void setLastName(String lastName){this.lastName=lastName;}
-    public void setDni(String dni){this.dni=dni;}
-    public void setPhone(String phone){this.phone=phone;}
-    public void setAddress(String address){this.address=address;}
-
-
+    */
 }
